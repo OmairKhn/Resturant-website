@@ -2,8 +2,9 @@
  import { AppBar, Box, Divider, Drawer, IconButton, Toolbar, Typography } from '@mui/material'
  import MenuIcon from '@mui/icons-material/Menu';
  import FastfoodIcon from '@mui/icons-material/Fastfood';
- import { Link } from 'react-router-dom';
+ import { Link ,NavLink} from 'react-router-dom';
  import "../../styles/HeaderStyles.css"
+ import logo from '../../images/logo.svg'
  const Header = () => {
   const [mobileOpen, setMobileOpen ] = useState(false)
   const handleDrawerToggle =() => {
@@ -12,22 +13,22 @@
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{textAlign:'center'}}>
   <Typography color={'goldenrod'} variant="h6" component="div" sx={{flexGrow:2}}>
-              <FastfoodIcon/>
-            MY Resturant
+  <img src={logo} alt="logo" height={'70'} width="200px"/>
+
             </Typography>
             <Divider/>
   <ul className='mobile-navigation'>
     <li>
-      <Link to={'/'}>Home</Link>
+      <NavLink to={'/'}>Home</NavLink>
     </li>
     <li>
-      <Link to={'/menu'}>Menu</Link>
+      <NavLink to={'/menu'}>Menu</NavLink>
     </li>
     <li>
-      <Link to={'/about'}>About</Link>
+      <NavLink to={'/about'}>About</NavLink>
     </li>
     <li>
-      <Link to={'/contact'}>Contact</Link>
+      <NavLink to={'/contact'}>Contact</NavLink>
     </li>
     
   </ul>
@@ -45,22 +46,21 @@
               </IconButton>
             <Typography color={'goldenrod'} variant="h6" 
             component="div" sx={{flexGrow:2}}>
-              <FastfoodIcon/>
-            MY Resturant
+          <img src={logo} alt="logo" height={'70'} width="250px"/>
             </Typography>
 <Box sx={{display:{xs:'none' , sm:"block"}}}>
   <ul className='navigation-menu'>
     <li>
-      <Link to={'/'}>Home</Link>
+      <NavLink to={'/'}>Home</NavLink>
     </li>
     <li>
-      <Link to={'/menu'}>Menu</Link>
+      <NavLink to={'/menu'}>Menu</NavLink>
     </li>
     <li>
-      <Link to={'/about'}>About</Link>
+      <NavLink to={'/about'}>About</NavLink>
     </li>
     <li>
-      <Link to={'/contact'}>Contact</Link>
+      <NavLink to={'/contact'}>Contact</NavLink>
     </li>
   </ul>
 </Box>

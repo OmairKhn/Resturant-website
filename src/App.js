@@ -4,9 +4,10 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About  from './pages/About';
-import Contact from './pages/Contact';
-import Menu  from './pages/Menu';
+import {Contact} from './pages/Contact';
+import {Menu}  from './pages/Menu';
 import  Pagenotfound from './pages/Pagenotfound';
+import styled from '@emotion/styled';
 function App() {
   return (
     <div>
@@ -27,3 +28,5 @@ function App() {
 }
 
 export default App;
+
+
